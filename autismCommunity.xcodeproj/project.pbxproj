@@ -7,18 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09C666E92953232E00E62198 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C666E82953232E00E62198 /* SignUp.swift */; };
+		09C666EB2953233900E62198 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C666EA2953233900E62198 /* SignIn.swift */; };
 		09D13741294CD7A8001DE3D6 /* autismCommunityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13740294CD7A8001DE3D6 /* autismCommunityApp.swift */; };
-		09D13743294CD7A8001DE3D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13742294CD7A8001DE3D6 /* ContentView.swift */; };
 		09D13745294CD7A9001DE3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D13744294CD7A9001DE3D6 /* Assets.xcassets */; };
 		09D13748294CD7A9001DE3D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D13747294CD7A9001DE3D6 /* Preview Assets.xcassets */; };
+		09D13752294CD8CC001DE3D6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13751294CD8CC001DE3D6 /* ListView.swift */; };
+		09D13754294CD8E5001DE3D6 /* PostTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13753294CD8E5001DE3D6 /* PostTable.swift */; };
+		09D13756294CD911001DE3D6 /* SetPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13755294CD911001DE3D6 /* SetPost.swift */; };
+		09D1375A294CDA41001DE3D6 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13759294CDA41001DE3D6 /* Welcome.swift */; };
+		09D1375C294CDABE001DE3D6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1375B294CDABE001DE3D6 /* TabBar.swift */; };
+		09D1375E294CDAD2001DE3D6 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1375D294CDAD2001DE3D6 /* Community.swift */; };
+		09D13762294CDB4B001DE3D6 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13761294CDB4B001DE3D6 /* PostView.swift */; };
+		09D13765294CEF3D001DE3D6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13764294CEF3D001DE3D6 /* Account.swift */; };
+		09D8F390294F502C00A86663 /* SpecialisitPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8F38F294F502C00A86663 /* SpecialisitPost.swift */; };
+		09D8F392294F526E00A86663 /* SpecialistPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8F391294F526E00A86663 /* SpecialistPostView.swift */; };
+		F4D9278929504B0B00798806 /* CommentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9278829504B0B00798806 /* CommentTable.swift */; };
+		F4D9278B29504CC300798806 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9278A29504CC300798806 /* CommentView.swift */; };
+		F4D9278F29506C1900798806 /* DetailsPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9278E29506C1900798806 /* DetailsPostView.swift */; };
+		F4D9279129506E0000798806 /* DetailsPostAndComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9279029506E0000798806 /* DetailsPostAndComment.swift */; };
+		F4D927932950AE4100798806 /* DetailsSPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D927922950AE4100798806 /* DetailsSPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09C666E72953055800E62198 /* autismCommunityRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = autismCommunityRelease.entitlements; sourceTree = "<group>"; };
+		09C666E82953232E00E62198 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; usesTabs = 0; };
+		09C666EA2953233900E62198 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		09D1373D294CD7A8001DE3D6 /* autismCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autismCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D13740294CD7A8001DE3D6 /* autismCommunityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autismCommunityApp.swift; sourceTree = "<group>"; };
-		09D13742294CD7A8001DE3D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09D13744294CD7A9001DE3D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09D13747294CD7A9001DE3D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09D1374E294CD7B8001DE3D6 /* autismCommunity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = autismCommunity.entitlements; sourceTree = "<group>"; };
+		09D13751294CD8CC001DE3D6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		09D13753294CD8E5001DE3D6 /* PostTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTable.swift; sourceTree = "<group>"; };
+		09D13755294CD911001DE3D6 /* SetPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPost.swift; sourceTree = "<group>"; };
+		09D13759294CDA41001DE3D6 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		09D1375B294CDABE001DE3D6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		09D1375D294CDAD2001DE3D6 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		09D13761294CDB4B001DE3D6 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		09D13764294CEF3D001DE3D6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; usesTabs = 0; };
+		09D8F38F294F502C00A86663 /* SpecialisitPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialisitPost.swift; sourceTree = "<group>"; };
+		09D8F391294F526E00A86663 /* SpecialistPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistPostView.swift; sourceTree = "<group>"; };
+		F4D9278829504B0B00798806 /* CommentTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTable.swift; sourceTree = "<group>"; };
+		F4D9278A29504CC300798806 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		F4D9278E29506C1900798806 /* DetailsPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPostView.swift; sourceTree = "<group>"; };
+		F4D9279029506E0000798806 /* DetailsPostAndComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPostAndComment.swift; sourceTree = "<group>"; };
+		F4D927922950AE4100798806 /* DetailsSPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +85,12 @@
 		09D1373F294CD7A8001DE3D6 /* autismCommunity */ = {
 			isa = PBXGroup;
 			children = (
+				09C666E72953055800E62198 /* autismCommunityRelease.entitlements */,
+				09D13763294CEB5E001DE3D6 /* view */,
+				09D13758294CD9EB001DE3D6 /* viewModel */,
+				09D13757294CD9E5001DE3D6 /* model */,
+				09D1374E294CD7B8001DE3D6 /* autismCommunity.entitlements */,
 				09D13740294CD7A8001DE3D6 /* autismCommunityApp.swift */,
-				09D13742294CD7A8001DE3D6 /* ContentView.swift */,
 				09D13744294CD7A9001DE3D6 /* Assets.xcassets */,
 				09D13746294CD7A9001DE3D6 /* Preview Content */,
 			);
@@ -65,6 +103,44 @@
 				09D13747294CD7A9001DE3D6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09D13757294CD9E5001DE3D6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				09D13753294CD8E5001DE3D6 /* PostTable.swift */,
+				09D8F38F294F502C00A86663 /* SpecialisitPost.swift */,
+				F4D9278829504B0B00798806 /* CommentTable.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		09D13758294CD9EB001DE3D6 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09D13751294CD8CC001DE3D6 /* ListView.swift */,
+				09D13761294CDB4B001DE3D6 /* PostView.swift */,
+				09D8F391294F526E00A86663 /* SpecialistPostView.swift */,
+				F4D9278A29504CC300798806 /* CommentView.swift */,
+				F4D9278E29506C1900798806 /* DetailsPostView.swift */,
+				F4D927922950AE4100798806 /* DetailsSPostView.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		09D13763294CEB5E001DE3D6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				09D13759294CDA41001DE3D6 /* Welcome.swift */,
+				09D1375B294CDABE001DE3D6 /* TabBar.swift */,
+				09D13755294CD911001DE3D6 /* SetPost.swift */,
+				09D13764294CEF3D001DE3D6 /* Account.swift */,
+				09D1375D294CDAD2001DE3D6 /* Community.swift */,
+				F4D9279029506E0000798806 /* DetailsPostAndComment.swift */,
+				09C666E82953232E00E62198 /* SignUp.swift */,
+				09C666EA2953233900E62198 /* SignIn.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +213,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D13743294CD7A8001DE3D6 /* ContentView.swift in Sources */,
+				F4D9278929504B0B00798806 /* CommentTable.swift in Sources */,
+				09C666EB2953233900E62198 /* SignIn.swift in Sources */,
+				F4D9278B29504CC300798806 /* CommentView.swift in Sources */,
+				09D13754294CD8E5001DE3D6 /* PostTable.swift in Sources */,
+				09D13756294CD911001DE3D6 /* SetPost.swift in Sources */,
 				09D13741294CD7A8001DE3D6 /* autismCommunityApp.swift in Sources */,
+				09D1375A294CDA41001DE3D6 /* Welcome.swift in Sources */,
+				09D8F390294F502C00A86663 /* SpecialisitPost.swift in Sources */,
+				09D8F392294F526E00A86663 /* SpecialistPostView.swift in Sources */,
+				09D13752294CD8CC001DE3D6 /* ListView.swift in Sources */,
+				09D13765294CEF3D001DE3D6 /* Account.swift in Sources */,
+				F4D9279129506E0000798806 /* DetailsPostAndComment.swift in Sources */,
+				F4D927932950AE4100798806 /* DetailsSPostView.swift in Sources */,
+				09D1375C294CDABE001DE3D6 /* TabBar.swift in Sources */,
+				09D13762294CDB4B001DE3D6 /* PostView.swift in Sources */,
+				F4D9278F29506C1900798806 /* DetailsPostView.swift in Sources */,
+				09D1375E294CDAD2001DE3D6 /* Community.swift in Sources */,
+				09C666E92953232E00E62198 /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,21 +356,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = autismCommunity/autismCommunity.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"autismCommunity/Preview Content\"";
+				DEVELOPMENT_TEAM = 2LVJ578ZR5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Autism Community";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = demo.autismCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -292,21 +389,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = autismCommunity/autismCommunityRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"autismCommunity/Preview Content\"";
+				DEVELOPMENT_TEAM = 2LVJ578ZR5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Autism Community";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = demo.autismCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

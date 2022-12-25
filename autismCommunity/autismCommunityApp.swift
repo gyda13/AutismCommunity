@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import CloudKit
 
 @main
 struct autismCommunityApp: App {
+    
+    
+    let container = CKContainer(identifier: "iCloud.demo.autismCommunity.community").publicCloudDatabase
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+        Welcome()
+          
+            
         }
+        
+    }
+}
+
+struct Previews_autismCommunityApp_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
