@@ -5,7 +5,7 @@ community and provide them with opportunities to refresh their knowledge about 
 ## Technologies
 - SwiftUI </br>
 - CloudKit </br>
-- push notification </br>
+- Push Notification </br>
 
 ## TsetFlight
 https://testflight.apple.com/join/ymq7zJ1S
