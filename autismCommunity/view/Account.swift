@@ -83,7 +83,8 @@ struct Account: View {
                                        .fontWeight(.light)
                                }.padding(10)
                                Spacer()
-                                   
+                                 
+               
                                List{
                                    Section{
                                        VStack{
@@ -93,7 +94,6 @@ struct Account: View {
                                                Text("osamah")}
                                        }}
                                        
-                                   
                                    Section{
                                        VStack{
                                            Text("Password")
@@ -101,14 +101,7 @@ struct Account: View {
                                                Text("*************")}}
                }
                                    
-                                   Section{
-                                       VStack(alignment: .leading){
-                                       Text("     Email")
-                                       HStack{Image(systemName: "envelope")
-                                       Text("osama@gmail.com")}}
-                                       
-                                   }
-                                   
+                             
                                }.listStyle(.inset)
                                    .padding(30)
                                 .scrollDisabled(true)
@@ -118,7 +111,6 @@ struct Account: View {
                 VStack{
                     Button(
                         action: { vm.requestNotificationPermissions() }){ Text("Request Notification Permissions").underline()}
-                    
                     
                     
                     

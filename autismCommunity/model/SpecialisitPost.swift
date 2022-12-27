@@ -7,8 +7,6 @@
 
 
 import CloudKit
-import PhotosUI
-
 
 
 struct SpecialistPost: Identifiable {

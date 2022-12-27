@@ -2,7 +2,7 @@
 //  CommentTable.swift
 //  autismCommunity
 //
-//  Created by sarah alnasser on 25/05/1444 AH.
+//  Created by gyda almohaimeed on 25/05/1444 AH.
 //
 
 import SwiftUI
@@ -36,7 +36,7 @@ struct CommentTable: Identifiable {
             self.date  = record["date"] as? Date ?? Date()
             self.PostId = record["PostId"] as? String ?? "N/A"
         }
-    // why?
+
     func toDictionary() -> [String: Any] {
         return ["writer": writer, "content": content, "date": date , PostId: "PostId"]
     }

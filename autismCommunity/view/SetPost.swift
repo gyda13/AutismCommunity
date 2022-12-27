@@ -14,19 +14,13 @@ struct SetPost: View {
    
     
     @StateObject private var vm: ListView
-    //@State private var selectedItem: PhotosPickerItem? = nil
     @State private var title: String = ""
     @State private var content: String = ""
-   
     @State private var photosPickerPresented = false
-    
     @State var isModal: Bool = false
-   //--changed----
-    //@State private var photoPickerItems = [PhotosPickerItem]()
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
-    //----
-    
+  
     @State var selection: String = "Individual"
     
     init(vm: ListView){
@@ -49,13 +43,13 @@ struct SetPost: View {
                         
                     }
                     .padding()
-                    .frame(width: 271 ,height:73)
+                    .frame(width: 320 ,height:73)
                     .background(.clear)
                     .cornerRadius(15)
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(.gray, lineWidth: 1)
-                            .frame(width: 271 ,height:73))
+                            .frame(width: 320 ,height:73))
                     
                     VStack {
                         TextField("Add your comment", text: $content, axis: .vertical)
@@ -64,13 +58,13 @@ struct SetPost: View {
                         
                     }
                     .padding()
-                    .frame(width: 271 ,height:265)
+                    .frame(width: 320 ,height:265)
                     .background(.clear)
                     .cornerRadius(15)
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(.gray, lineWidth: 1)
-                            .frame(width: 271 ,height:265))
+                            .frame(width: 320 ,height:265))
                 
              
                 VStack {
@@ -79,22 +73,13 @@ struct SetPost: View {
                                // Present photo Picker
                                photosPickerPresented.toggle()
                            } label: {
-                               Text("Show Photos Picker").padding(2)
+                               Image(systemName: "square.and.arrow.up.on.square").padding(40) .font(.system(size:25, weight: .bold)).foregroundColor(.black)
+                               
                            }
                            .photosPicker(isPresented: $photosPickerPresented, selection: $selectedItem)// changed
-                       
-//                   PhotosPicker(
-//                          selection: $selectedItem,
-//                          matching: .images,
-//                          photoLibrary: .shared()) {
-//                              Text("Select a photo")
-//
-//                          }
                     
-               //----changed
                            .onChange(of: selectedItem) { newItem in
                                Task {
-                                   // Retrive selected asset in the form of Data
                                    if let data = try? await newItem?.loadTransferable(type: Data.self) {
                                        selectedImageData = data
                                    }
@@ -110,28 +95,22 @@ struct SetPost: View {
                         
                     }
                     
-                    //------
-                    
-                         
+                  
                 }
-               // .padding() // changed
-                
-                .frame(width: 271 ,height:117,alignment: .top)
+                .frame(width: 320 ,height:117,alignment: .top)
                 .background(.clear)
                 .cornerRadius(15)
                 .overlay(
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(.gray, lineWidth: 1)
-                        .frame(width: 271 ,height:117))
+                        .frame(width: 320 ,height:117))
              
             
                 HStack{
-                    Text("Select an option:")
-                    Picker("", selection: $selection) {
+                    Picker("" , selection: $selection){
                         Text("Individual").tag("Individual")
-                        Text("Specialisit").tag("Specialisit")
-                        
-                    }
+                        Text("Specialist").tag("Specialist")
+                    }.pickerStyle(.segmented).frame(width: 320, height: 50)
                 }
                 
                 Button("Submit"){
@@ -159,9 +138,9 @@ struct SetPost: View {
                     
                     
                     }
-                .frame(width: 270, height: 50)
+                .frame(width: 320, height: 50)
                 .background(
-                RoundedRectangle(cornerRadius: 7,style: .continuous)
+                RoundedRectangle(cornerRadius: 15,style: .continuous)
                  .foregroundColor(Color.accentColor))
                 .foregroundColor(.white)
              

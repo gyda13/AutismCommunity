@@ -6,8 +6,6 @@
 //
 
 import CloudKit
-import PhotosUI
-
 
 
 struct PostTable: Identifiable {

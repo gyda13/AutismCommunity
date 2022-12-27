@@ -7,13 +7,13 @@
 
 import Foundation
 import CloudKit
-import PhotosUI
+
 
 enum RecordType: String {
     case post = "PostTable"
     
     case specialistPost = "SpecialistPost"
-   // case comment = "CommentTable"
+    case comment = "CommentTable"
 }
 
 class ListView: ObservableObject {
@@ -60,22 +60,22 @@ class ListView: ObservableObject {
         
     }
  
-//    func saveComment( writer: String,
-//                      content: String ,PostId: String, date: Date = Date() ){
-//        
-//        let record = CKRecord(recordType: RecordType.comment.rawValue)
-//       
-//            let comment = CommentTable(writer: writer, content: content, date: date, PostId: PostId )
-//       record.setValuesForKeys(comment.toDictionary())
-//        
-//        self.database.save(record) { newRecord, error in
-//            if let _ = newRecord {
-//                print("saved")
-//            }
-//        }
-//        
-//    }
-//    
+    func saveComment( writer: String,
+                      content: String ,PostId: String, date: Date = Date() ){
+        
+        let record = CKRecord(recordType: RecordType.comment.rawValue)
+       
+            let comment = CommentTable(writer: writer, content: content, date: date, PostId: PostId )
+       record.setValuesForKeys(comment.toDictionary())
+        
+        self.database.save(record) { newRecord, error in
+            if let _ = newRecord {
+                print("saved")
+            }
+        }
+        
+    }
+    
     
 
     

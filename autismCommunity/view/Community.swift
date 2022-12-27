@@ -17,14 +17,22 @@ struct Community: View {
     
     @State var postArray : [PostTable] = []
     @State var SpecialistPostArray : [SpecialistPost] = []
+    @State var commentArray : [CommentTable] = []
+    
+    @StateObject private var vm: ListView
+
+    @State private var AddComment : String = ""
+
+    
+    init(vm: ListView){
+        _vm = StateObject(wrappedValue: vm)
+    }
     
     var body: some View {
         
         NavigationView{
             
             VStack {
-                
-                ///---------------------
                 
                 
                 Picker("" , selection: $selection){
@@ -42,17 +50,33 @@ struct Community: View {
                         
                         ForEach(postArray) { post in
                             NavigationLink {
-                                
-                                DetailsPostAndComment(post: PostTable(title: post.title, writer: post.writer, describtion: post.describtion, content: post.content, num_of_comments: post.num_of_comments, date: post.date)) // change name
+                                DetailsPostView(post: PostTable(title: post.title, writer: post.writer, describtion: post.describtion, content: post.content, num_of_comments: post.num_of_comments, date: post.date))
+                                List{
+                                    ForEach(commentArray) { comment in
+                                        CommentView(comment: CommentTable(writer: comment.writer, content: comment.content, PostId:comment.PostId))
+                                    }
+                                    TextField("Add your comment", text: $AddComment, axis: .vertical )
+                                        .lineLimit(2, reservesSpace: true).padding()
+                                        .frame(width: 318 ,height:73)
+                                        .background(.clear)
+                                        .cornerRadius(15)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(.gray, lineWidth: 1)
+                                                .frame(width: 318 ,height:100)).padding()
+                               
+                                    .onSubmit {
+                                        vm.saveComment( writer: chooseRandomName(), content: AddComment,PostId: "test")
+                                            self.AddComment = " "
+                                   
+                                        
+                                    }.submitLabel(.send)
+                                }.scrollContentBackground(.hidden)
                             } label: {
                               
                                 PostView(post: PostTable(title: post.title, writer: post.writer, describtion: post.describtion, content: post.content, num_of_comments: post.num_of_comments, date: post.date))
-                                //                                .onTapGesture {
-                                //
-                                //                                }
+                                                              
                             }
-                            
-                            
                             
                         }
                         
@@ -65,16 +89,11 @@ struct Community: View {
                         ForEach(SpecialistPostArray) { spost in
                             NavigationLink {
                                 
-                                DetailsSPostView(specialistPost: SpecialistPost(title: spost.title, writer: spost.writer, describtion: spost.describtion, content: spost.content, num_of_comments: spost.num_of_comments, date: spost.date)) // change name
-                                
-                               // DetailsPostAndComment()
-                                //DetailsPostAndComment(post: post)// change name
+                                DetailsSPostView(specialistPost: SpecialistPost(title: spost.title, writer: spost.writer, describtion: spost.describtion, content: spost.content, num_of_comments: spost.num_of_comments, date: spost.date)) 
                             } label: {
                               
                                 SpecialistPostView(specialistPost: SpecialistPost(title: spost.title, writer: spost.writer, describtion: spost.describtion, content: spost.content, num_of_comments: spost.num_of_comments, date: spost.date))
-                                //                                .onTapGesture {
-                                //
-                                //                                }
+                            
                             }
                             
                             
@@ -85,14 +104,12 @@ struct Community: View {
                 }
                 
                 
-                //-------------------
-            
-                
                 
             }
             .onAppear{
                  fetchPost()
                 fetchSPost()
+                fetchcomment()
             }
 
             .searchable(text: $searchQuery)
@@ -163,10 +180,31 @@ struct Community: View {
 
       CKContainer(identifier: "iCloud.demo.autismCommunity.community").publicCloudDatabase.add(operation)
        }
+    func fetchcomment(){
+        
+           let predicate = NSPredicate(value: true)
+           let query = CKQuery(recordType:"CommentTable", predicate: predicate)
+
+
+           let operation = CKQueryOperation(query: query)
+           operation.recordMatchedBlock = { recordId, result in
+               DispatchQueue.main.async {
+                   switch result{
+                   case .success(let record):
+                       let comment = CommentTable(record: record)
+                       self.commentArray.append(comment)
+                   case .failure(let error):
+                       print("\(error.localizedDescription)")
+                   }
+               }
+           }
+
+      CKContainer(identifier: "iCloud.demo.autismCommunity.community").publicCloudDatabase.add(operation)
+       }
         
     struct Community_Previews: PreviewProvider {
         static var previews: some View {
-            Community()
+            Community(vm: ListView(container: CKContainer.default()))
         }
     }
 }

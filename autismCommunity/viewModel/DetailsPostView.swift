@@ -2,13 +2,15 @@
 //  DetailsPostView.swift
 //  autismCommunity
 //
-//  Created by sarah alnasser on 25/05/1444 AH.
+//  Created by gyda almohaimeed on 25/05/1444 AH.
 //
 
 import SwiftUI
-import CloudKit
+
+
 struct DetailsPostView: View {
     let post: PostTable
+    
     var body: some View {
         ZStack
         {
@@ -29,19 +31,18 @@ struct DetailsPostView: View {
                         .cornerRadius(40)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.blue, lineWidth: 2))
-                    //Text("pic")
-                        
-                    }.frame(width:78,height: 73)//.background(.red)
+                 
+                    }.frame(width:78,height: 73)
                    VStack(spacing: 0){// title and discribtion
-                        Text(post.title).frame(width:240,height: 40,alignment: .leading).font(.custom( "Helvetica", size: 16)).bold()//.background(.gray)
+                        Text(post.title).frame(width:240,height: 40,alignment: .leading).font(.custom( "Helvetica", size: 16)).bold()
                        // wirter
-                     Text("By :" + post.writer)  .frame(width:240,height: 10,alignment: .trailing).font(.custom( "Helvetica", size: 14)).foregroundColor(.gray).offset(x:-5)//.background(.brown)
+                     Text("By :" + post.writer)  .frame(width:240,height: 10,alignment: .trailing).font(.custom( "Helvetica", size: 14)).foregroundColor(.gray).offset(x:-5)
         
                     }
                 }.padding(2)
             
                 Text(post.content).frame(width:310,height: 288,alignment: .topLeading).font(.custom( "Helvetica", size: 16)).foregroundColor(.black)
-                //.background(.purple)
+              
                 
                 
                     HStack{
@@ -52,7 +53,7 @@ struct DetailsPostView: View {
                             Image(systemName: "message").offset(x:70)
                         
                        
-                    }.frame(width:318,height: 31,alignment:.leading).font(.custom( "Helvetica", size: 14))//.background(.cyan)
+                    }.frame(width:318,height: 31,alignment:.leading).font(.custom( "Helvetica", size: 14))
                     
                 
                 

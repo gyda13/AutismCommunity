@@ -3,11 +3,11 @@
 //  DetailsPostView.swift
 //  autismCommunity
 //
-//  Created by sarah alnasser on 25/05/1444 AH.
+//  Created by gyda almohaimeed on 25/05/1444 AH.
 //
 
 import SwiftUI
-import CloudKit
+
 struct DetailsSPostView: View {
     let specialistPost: SpecialistPost
     var body: some View {
@@ -32,17 +32,16 @@ struct DetailsSPostView: View {
                         .overlay(Circle().stroke(Color.blue, lineWidth: 2))
                     //Text("pic")
                         
-                    }.frame(width:78,height: 73)//.background(.red)
+                    }.frame(width:78,height: 73)
                    VStack(spacing: 0){// title and discribtion
                         Text(specialistPost.title).frame(width:240,height: 40,alignment: .leading).font(.custom( "Helvetica", size: 16)).bold()//.background(.gray)
                        // wirter
-                     Text("By: " + specialistPost.writer)  .frame(width:240,height: 10,alignment: .trailing).font(.custom( "Helvetica", size: 14)).foregroundColor(.gray).offset(x:-5)//.background(.brown)
+                     Text("By: " + specialistPost.writer)  .frame(width:240,height: 10,alignment: .trailing).font(.custom( "Helvetica", size: 14)).foregroundColor(.gray).offset(x:-5)
         
                     }
                 }.padding(2)
             
-                Text(specialistPost.content).frame(width:310,height: 288,alignment: .topLeading).font(.custom( "Helvetica", size: 16)).foregroundColor(.black)//.background(.purple)
-                
+                Text(specialistPost.content).frame(width:310,height: 288,alignment: .topLeading).font(.custom( "Helvetica", size: 16)).foregroundColor(.black)
                 
                     HStack{
                         Text(specialistPost.date, style: .time).offset(x:6)
@@ -52,7 +51,7 @@ struct DetailsSPostView: View {
                             Image(systemName: "message").offset(x:70)
                         
                        
-                    }.frame(width:318,height: 31,alignment:.leading).font(.custom( "Helvetica", size: 14))//.background(.cyan)
+                    }.frame(width:318,height: 31,alignment:.leading).font(.custom( "Helvetica", size: 14))
                     
                 
                 
@@ -66,7 +65,7 @@ struct DetailsSPostView: View {
 
 struct DetailsSPostView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsSPostView(specialistPost: SpecialistPost(title: "Autism spectrum disorder (ASD)", writer: "Sarah Alnasser", describtion: " Autism spectrum disorder (ASD) is a developmental disability", content: "Autism spectrum disorder (ASD) is a developmental disability caused by differences in the brain. People with ASD often have problems with social communication and interaction, and restricted or repetitive behaviors or interests. People with ASD may also have different ways of learning, moving, or paying attention Autism spectrum disorder (ASD) is a developmental disability caused by differences in the brain. People with ASD often have problems with social communication and interaction, and restricted or repetitive behaviors or interests.", num_of_comments: 0))
+        DetailsSPostView(specialistPost: SpecialistPost(title: "", writer: "", describtion: "", content: "", num_of_comments: 0))
      
     }
 }
