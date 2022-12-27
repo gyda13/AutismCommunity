@@ -1,6 +1,6 @@
 # AutismCommunity
 An App that  provides a way for autism's who want(s) to share their interests by providing a sharing 
-community and provide them with opportunities to refresh their knowledge about autism through specialists
+community and provide them with opportunities to refresh their knowledge about autism through specialists.
 
 ## Technologies
 - SwiftUI </br>
