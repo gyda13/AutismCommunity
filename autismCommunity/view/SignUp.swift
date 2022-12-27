@@ -10,23 +10,25 @@ import SwiftUI
 
 struct SignUp: View {
     
-    @State  var email = ""
-    @State  var password = ""
-    @State  var wrongEmail = 0
-    @State  var wrongPassword = 0
+    
+    @State var name = ""
+    @State var email = ""
+    @State var password = ""
+    @State var id = ""
+    
+    
     @State  var showingLonginScreen = false
     @State  var selection = "Individual"
-    @State  var id = ""
+   
 
     
     var body: some View {
         NavigationView {
             VStack {
                
-                    TextField("Name", text: $email)
+                    TextField("Name", text: $name)
                         .padding()
                         .frame(width: 320 ,height:50)
-                        .background(.clear)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
@@ -37,7 +39,6 @@ struct SignUp: View {
                     TextField("Email", text: $email)
                         .padding()
                         .frame(width: 320 ,height:50)
-                        .background(.clear)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
@@ -47,7 +48,6 @@ struct SignUp: View {
                     TextField("ID", text: $id)
                         .padding()
                         .frame(width: 320 ,height:50)
-                        .background(.clear)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
@@ -64,9 +64,7 @@ struct SignUp: View {
                         .padding()
                         .foregroundColor(.black)
                         .background(.clear)
-                        .border(.red, width:CGFloat(wrongPassword))
                         .frame(width: 320 ,height:50)
-                        .background(.clear)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
@@ -74,21 +72,7 @@ struct SignUp: View {
                                 .frame(width: 320 ,height:50))
                 
            
-                    SecureField("Confirm password", text: $password)
-                        .padding()
-                        .foregroundColor(.black)
-                        .background(.clear)
-                        .border(.red, width:CGFloat(wrongPassword))
-                        .frame(width: 320 ,height:50)
-                        .background(.clear)
-                        .cornerRadius(15)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(.gray, lineWidth: 1)
-                                .frame(width: 320 ,height:50))
-                
-               
-                
+                   
             
                 Picker("" , selection: $selection){
                     Text("Individual").tag("Individual")
@@ -112,6 +96,8 @@ struct SignUp: View {
                             Text("Sign In")
                         }
                     }
+                
+          
                 
                 
                   

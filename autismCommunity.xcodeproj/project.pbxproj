@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0919A211295BA20700551BC8 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919A210295BA20700551BC8 /* PushNotification.swift */; };
+		0919A213295BA87200551BC8 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919A212295BA87200551BC8 /* AccountInfo.swift */; };
 		09C666E92953232E00E62198 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C666E82953232E00E62198 /* SignUp.swift */; };
 		09C666EB2953233900E62198 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C666EA2953233900E62198 /* SignIn.swift */; };
 		09D13741294CD7A8001DE3D6 /* autismCommunityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D13740294CD7A8001DE3D6 /* autismCommunityApp.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0919A210295BA20700551BC8 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		0919A212295BA87200551BC8 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		09C666E72953055800E62198 /* autismCommunityRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = autismCommunityRelease.entitlements; sourceTree = "<group>"; };
 		09C666E82953232E00E62198 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; usesTabs = 0; };
 		09C666EA2953233900E62198 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				09D13753294CD8E5001DE3D6 /* PostTable.swift */,
 				09D8F38F294F502C00A86663 /* SpecialisitPost.swift */,
 				F4D9278829504B0B00798806 /* CommentTable.swift */,
+				0919A212295BA87200551BC8 /* AccountInfo.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				F4D9278A29504CC300798806 /* CommentView.swift */,
 				F4D9278E29506C1900798806 /* DetailsPostView.swift */,
 				F4D927922950AE4100798806 /* DetailsSPostView.swift */,
+				0919A210295BA20700551BC8 /* PushNotification.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				F4D9278929504B0B00798806 /* CommentTable.swift in Sources */,
 				09C666EB2953233900E62198 /* SignIn.swift in Sources */,
 				F4D9278B29504CC300798806 /* CommentView.swift in Sources */,
+				0919A213295BA87200551BC8 /* AccountInfo.swift in Sources */,
 				09D13754294CD8E5001DE3D6 /* PostTable.swift in Sources */,
 				09D13756294CD911001DE3D6 /* SetPost.swift in Sources */,
 				09D13741294CD7A8001DE3D6 /* autismCommunityApp.swift in Sources */,
@@ -222,6 +229,7 @@
 				09D13752294CD8CC001DE3D6 /* ListView.swift in Sources */,
 				09D13765294CEF3D001DE3D6 /* Account.swift in Sources */,
 				F4D927932950AE4100798806 /* DetailsSPostView.swift in Sources */,
+				0919A211295BA20700551BC8 /* PushNotification.swift in Sources */,
 				09D1375C294CDABE001DE3D6 /* TabBar.swift in Sources */,
 				09D13762294CDB4B001DE3D6 /* PostView.swift in Sources */,
 				F4D9278F29506C1900798806 /* DetailsPostView.swift in Sources */,

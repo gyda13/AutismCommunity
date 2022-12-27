@@ -13,28 +13,20 @@ struct Welcome: View {
     
     var body: some View {
         
-       
-        
         VStack{
             if isActive {
                 TabBar()
                 
             }else{
-                
                 Logoanimation()
-                
+
             }
-            
-        
-            
         }.onAppear(){
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 4.0){
                 self.isActive = true
             }
-        }
-       
-            
+        }     
     }
     }
 

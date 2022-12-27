@@ -6,69 +6,14 @@
 //
 
 import SwiftUI
-import CloudKit
 
-class PushNotificationViewModel: ObservableObject{
-    
-    func requestNotificationPermissions(){
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        UNUserNotificationCenter.current().requestAuthorization(options: options){ success, error in
-            if let error = error {
-                print(error)
-            } else if success {
-                print("Notification permissions success!")
-                
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            } else {
-                print("Notification permissions failure.")
-            }
-            
-        }
-    }
-    
-    func subscribeToNotifications(){
-        let predicate = NSPredicate(value: true)
-        
-        let subscription = CKQuerySubscription(recordType: "SpecialistPost", predicate: predicate, subscriptionID: "SpecialistPost_added_to_DB", options: .firesOnRecordCreation)
-        
-        let notification = CKSubscription.NotificationInfo()
-        notification.title = "New Specialist Post"
-        notification.alertBody = "Open the app to check what's new !!"
-        notification.soundName = "default"
-        subscription.notificationInfo = notification
-        
-        CKContainer(identifier: "iCloud.demo.autismCommunity.community").publicCloudDatabase.save(subscription) { returnedSubscription, returnedError in
-            if let error = returnedError {
-                print(error)
-            } else {
-                print("Successfully subsribed to notifications.")
-            }
-            
-        }
-    }
-    
-    func unsubscribeToNotifications(){
-        
-        CKContainer(identifier: "iCloud.demo.autismCommunity.community").publicCloudDatabase.delete(withSubscriptionID: "SpecialistPost_added_to_DB") { returnedID, returnedError in
-            if let error = returnedError {
-                print(error)
-            } else {
-                print("Successfully Unsubsribed.")
-            }
-        }
-    }
-    
-}
 
 
 struct Account: View {
     
     @State private var isOn = false
     
-    
-    @StateObject private var vm = PushNotificationViewModel()
+    @StateObject private var vm = PushNotification()
 
 
     var body: some View {
@@ -81,8 +26,7 @@ struct Account: View {
                                    Text("Individual")
                                        .font(.body)
                                        .fontWeight(.light)
-                               }.padding(10)
-                               Spacer()
+                               }
                                  
                
                                List{
@@ -103,8 +47,8 @@ struct Account: View {
                                    
                              
                                }.listStyle(.inset)
-                                   .padding(30)
                                 .scrollDisabled(true)
+                                .frame(width: 400, height: 200)
                              
                            }
                 
@@ -134,10 +78,10 @@ struct Account: View {
                     
                     Text("Sign out")
                         .bold()
-                        .frame(width: 270, height: 50)
+                        .frame(width: 320, height: 50)
                         .background(Color.accentColor)
                         .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .cornerRadius(15)
                     
                 }
             

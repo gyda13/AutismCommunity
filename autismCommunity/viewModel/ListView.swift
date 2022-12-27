@@ -5,13 +5,12 @@
 //  Created by gyda almohaimeed on 22/05/1444 AH.
 //
 
-import Foundation
+
 import CloudKit
 
 
 enum RecordType: String {
     case post = "PostTable"
-    
     case specialistPost = "SpecialistPost"
     case comment = "CommentTable"
 }

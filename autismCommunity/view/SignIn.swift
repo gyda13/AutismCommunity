@@ -12,8 +12,7 @@ struct SignIn: View {
 
     @State  var email = ""
     @State  var password = ""
-    @State  var wrongEmail = 0
-    @State  var wrongPassword = 0
+   
    
    
     
@@ -25,7 +24,6 @@ struct SignIn: View {
                     TextField("Email", text: $email)
                         .padding()
                         .frame(width: 320 ,height:50)
-                        .background(.clear)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
@@ -35,10 +33,7 @@ struct SignIn: View {
                     SecureField("Password", text: $password)
                         .padding()
                         .foregroundColor(.black)
-                        .background(.clear)
-                        .border(.red, width:CGFloat(wrongPassword))
                         .frame(width: 320 ,height:50)
-                        .background(.clear)
                         .cornerRadius(15)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)

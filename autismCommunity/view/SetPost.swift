@@ -16,8 +16,9 @@ struct SetPost: View {
     @StateObject private var vm: ListView
     @State private var title: String = ""
     @State private var content: String = ""
+    
+    
     @State private var photosPickerPresented = false
-    @State var isModal: Bool = false
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
   
@@ -73,7 +74,10 @@ struct SetPost: View {
                                // Present photo Picker
                                photosPickerPresented.toggle()
                            } label: {
-                               Image(systemName: "square.and.arrow.up.on.square").padding(40) .font(.system(size:25, weight: .bold)).foregroundColor(.black)
+                               VStack{
+                                   Image(systemName: "square.and.arrow.up.on.square").font(.system(size:25, weight: .bold)).foregroundColor(.black).padding()
+                                   Text("Select Image").padding(-10)
+                               }
                                
                            }
                            .photosPicker(isPresented: $photosPickerPresented, selection: $selectedItem)// changed
