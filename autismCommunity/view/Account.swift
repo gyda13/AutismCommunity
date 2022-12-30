@@ -48,16 +48,12 @@ struct Account: View {
                              
                                }.listStyle(.inset)
                                 .scrollDisabled(true)
-                                .frame(width: 400, height: 200)
+                                .frame(width: 400, height: 140)
                              
                            }
                 
                 VStack{
-                    Button(
-                        action: { vm.requestNotificationPermissions() }){ Text("Request Notification Permissions").underline()}
-                    
-                    
-                    
+                 
                     Toggle(isOn: $isOn) {
                         Text("Notifications")
                     }
@@ -72,7 +68,7 @@ struct Account: View {
                         
                     }
                   
-                }.padding(60)
+                }.padding(40)
                 
                 NavigationLink(destination: SignIn().navigationBarBackButtonHidden(true)){
                     

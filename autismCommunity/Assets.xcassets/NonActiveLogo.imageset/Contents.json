@@ -1,0 +1,19 @@
+{
+  "images" : [
+    {
+      "filename" : "Screen_Shot_1444-05-17_at_4.02.02_PM-removebg-preview 1.png",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "language-direction" : "right-to-left",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

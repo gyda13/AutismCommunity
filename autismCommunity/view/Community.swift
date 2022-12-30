@@ -28,6 +28,13 @@ struct Community: View {
         _vm = StateObject(wrappedValue: vm)
     }
     
+    private enum Field: Int, CaseIterable {
+           case AddComment
+       }
+    
+    @FocusState private var focusedField: Field?
+    
+    
     var body: some View {
         
         NavigationView{
@@ -53,24 +60,28 @@ struct Community: View {
                                 DetailsPostView(post: PostTable(title: post.title, writer: post.writer, describtion: post.describtion, content: post.content, num_of_comments: post.num_of_comments, date: post.date))
                                 List{
                                     ForEach(commentArray) { comment in
-                                        CommentView(comment: CommentTable(writer: comment.writer, content: comment.content, PostId:comment.PostId))
+                                        CommentView(comment: CommentTable(writer: comment.writer, content: comment.content, date: comment.date, PostId:comment.PostId))
                                     }
-                                    TextField("Add your comment", text: $AddComment, axis: .vertical )
+                                    TextField("Add your comment", text: $AddComment )
                                         .lineLimit(2, reservesSpace: true).padding()
                                         .frame(width: 318 ,height:73)
-                                        .background(.clear)
                                         .cornerRadius(15)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 20)
                                                 .stroke(.gray, lineWidth: 1)
                                                 .frame(width: 318 ,height:100)).padding()
                                
-                                    .onSubmit {
+                                    Button("Send") {
                                         vm.saveComment( writer: chooseRandomName(), content: AddComment,PostId: "test")
                                             self.AddComment = " "
                                    
                                         
-                                    }.submitLabel(.send)
+                                    }.frame(width: 100, height: 50)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .foregroundColor(.accentColor))
+                                        .foregroundColor(.white)
+                                
                                 }.scrollContentBackground(.hidden)
                             } label: {
                               
@@ -181,7 +192,7 @@ struct Community: View {
       CKContainer(identifier: "iCloud.demo.autismCommunity.community").publicCloudDatabase.add(operation)
        }
     func fetchcomment(){
-        
+        commentArray = []
            let predicate = NSPredicate(value: true)
            let query = CKQuery(recordType:"CommentTable", predicate: predicate)
 
@@ -204,7 +215,7 @@ struct Community: View {
         
     struct Community_Previews: PreviewProvider {
         static var previews: some View {
-            Community(vm: ListView(container: CKContainer.default()))
+            Community(vm: ListView(container: CKContainer(identifier: "iCloud.demo.autismCommunity.community")))
         }
     }
 }

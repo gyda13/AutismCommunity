@@ -7,32 +7,48 @@
 
 import SwiftUI
 import CloudKit
+import Combine
 
 struct TabBar: View {
     
     let container = CKContainer(identifier: "iCloud.demo.autismCommunity.community")
     
+
+    @State var selection = 0
+    
     var body: some View {
-        TabView {
-            Community(vm: ListView(container: CKContainer.default()))
+        TabView(selection: $selection) {
+          
+            Community(vm: ListView(container: container))
                 .tabItem {
-                    Label("Community", image: "IconLogo")
-                }
-            
+                                if selection == 0 {
+                                    Image("IconLogo")
+                                } else {
+                                    Image("NonActiveLogo")
+                                }
+                                Text("Community")
+                            }.tag(0)
+                
+//                .tabItem {
+//                 Label("Community", image:"IconLogo")
+//
+//                }
+                
             SetPost(vm: ListView(container: container)) .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
                 .tabItem {
                     Label("Post", systemImage: "plus.app")
-                    
-                }
+                      
+                }.tag(1)
             
             SignUp()
                 .tabItem {
                     Label("Account", systemImage: "person.fill")
-                }
+                }.tag(2)
             
         }
        .onAppear() {
             UITabBar.appearance().backgroundColor = .white
+          
         }
     }
 }

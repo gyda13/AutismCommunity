@@ -50,7 +50,10 @@ struct SetPost: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(.gray, lineWidth: 1)
-                            .frame(width: 320 ,height:73))
+                            .frame(width: 320 ,height:73)
+                            
+                    )
+                 
                     
                     VStack {
                         TextField("Add your comment", text: $content, axis: .vertical)
@@ -65,7 +68,9 @@ struct SetPost: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(.gray, lineWidth: 1)
-                            .frame(width: 320 ,height:265))
+                            .frame(width: 320 ,height:265)
+                          
+                    )
                 
              
                 VStack {
@@ -94,7 +99,7 @@ struct SetPost: View {
                         Image(uiImage: uiImage)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 200, height: 100)
+                          .frame(width: 200, height: 100)
                         
                         
                     }
@@ -154,7 +159,7 @@ struct SetPost: View {
                 
             
             }.navigationBarTitle("Post", displayMode: .large)
-              
+               
         }
     }
    
